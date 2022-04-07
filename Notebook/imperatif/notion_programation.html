@@ -1,0 +1,658 @@
+
+<body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
+
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><a href="https://colab.research.google.com/github/opentrainingcamp/python/blob/main/Notebook/imperatif/notion_programation.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Paradigme impératif, Python les bases
+Pascal Fares (c) Cnam Liban</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Programmation-imp%C3%A9rative-:-introduction,-imp%C3%A9ratif?">Programmation imp&#233;rative : introduction, imp&#233;ratif?<a class="anchor-link" href="#Programmation-imp%C3%A9rative-:-introduction,-imp%C3%A9ratif?">&#182;</a></h2><h3 id="Objectifs">Objectifs<a class="anchor-link" href="#Objectifs">&#182;</a></h3><ul>
+<li>Comprendre les principes de la programmation impérative </li>
+<li>Algorithmique : types primitifs, instructions, structures de contrôle </li>
+<li>Méthode des raffinages. </li>
+<li>Structuration des données : tableaux, enregistrements, types énumérés </li>
+<li>Structuration des instructions : sous-programmes et modules </li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Variables,-valeurs">Variables, valeurs<a class="anchor-link" href="#Variables,-valeurs">&#182;</a></h2><p>Une des fonctionnalités essentielle d'un langage de programmation impératif est la manipulation des variables et les faire évoluer jusqu'à obtenir le résultat souhaité à partir d’une situation initiale.</p>
+<p>Une variable est un nom qui fait référence à une valeur. je schématise souvent par {nom: valeur}</p>
+<p>pour donner une valeur à une variable =&gt; l’affectation (change l’état, car change la valeur)</p>
+<p>Exemple:</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span> 
+<span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Un long message texte&quot;</span>
+<span class="n">un_autre_message</span> <span class="o">=</span> <span class="s1">&#39;Aussi un texte&#39;</span>
+<span class="n">pi</span> <span class="o">=</span> <span class="mf">3.141592653589793</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">globals</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="%C3%89tat">&#201;tat<a class="anchor-link" href="#%C3%89tat">&#182;</a></h2><p>J'applelerais l'état d'un programme, l'ensemble des variables et de leur valeur</p>
+<p>dans l'exemple précédent j'aurais:</p>
+<p><code>{x: 3, message: "Un long message texte", un_autre_message: "aussi un texte", pi: 3.141592653589793}</code></p>
+<p>Nous avons vu dans l'introduction, notion de calculabilité: qu'un algorithme ou le programme (traduction de l'algorithme dans un language de programmation) permettent de <strong>transformer</strong>:</p>
+<ul>
+<li>une situation (état) initiale, </li>
+<li>au moyen d'une séquence d'instructions , </li>
+<li>en une situation (état) final qui est le résultat souhaité</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Premier-exemple-:-r%C3%A9soudre-%C3%A9quation-du-premier-degr%C3%A9-ax+b=0">Premier exemple : r&#233;soudre &#233;quation du premier degr&#233; ax+b=0<a class="anchor-link" href="#Premier-exemple-:-r%C3%A9soudre-%C3%A9quation-du-premier-degr%C3%A9-ax+b=0">&#182;</a></h2>
+<pre><code>Programme premier_degre
+Variables
+       a : entier
+       b: entier
+       r:  réel
+Debut
+      -- saisir les données
+      Ecrire (“Donner a et b”)
+      Lire(a)
+      Lire(b)
+      -- Calculer les réponses
+      -- réponse = -b/a a condition que a soit non nul (0)
+     r= -b/a
+      Ecrire (“La réponse est “, r)
+     -- ce programme n’est pas tout a fait correct
+Fin</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<blockquote><p>Executer sur papier le programme précédent</p>
+</blockquote>
+<h4 id="remarques">remarques<a class="anchor-link" href="#remarques">&#182;</a></h4><blockquote><p>-- est un commentaire</p>
+<p>Le reste est-il suffisament claire?</p>
+<p>A-t-on besoin de beaucoup plus d'explications?</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="S%C3%A9mantique">S&#233;mantique<a class="anchor-link" href="#S%C3%A9mantique">&#182;</a></h3><p><strong>Sémantique ou modèle de calcul:</strong> C’est ce qui donne le sens du programme (explique son comportement)</p>
+<p><strong>L’état du programme:</strong></p>
+<ul>
+<li>La valeur des variables déclarées dans le programme (une zone de la mémoire) </li>
+<li>Le compteur ordinal : le numéro de la prochaine instruction à exécuter </li>
+</ul>
+<p><strong>Lancement du programme :</strong></p>
+<ul>
+<li>Au début de l’exécution, les variables ont une valeur indéterminée. </li>
+<li>Le compteur ordinal indique la première instruction du programme principal </li>
+</ul>
+<p><strong>Exécution :</strong>
+Exécution de l’instruction référencée par le compteur ordinal et 
+mise à jour du compteur ordinal (en général l’instruction suivante : séquence).</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Principe-du-paradigme-imp%C3%A9ratif-:-instruction-/-expression">Principe du paradigme imp&#233;ratif : instruction / expression<a class="anchor-link" href="#Principe-du-paradigme-imp%C3%A9ratif-:-instruction-/-expression">&#182;</a></h3><p>Un programme est une séquence d’instructions qui modifient son état (cad les valeurs des variable déclarés). =&gt; l’affectation est la seule instruction qui modifie l’état!</p>
+<p><strong><code>x = a+b</code></strong> est une instruction elle modifie x</p>
+<p><strong><code>a+b</code></strong> seule n’est pas une instruction rien ne se passe (du point de vue état): du point de vue du programme qu’on écrit.</p>
+<p>Bien sure au niveaux machine il se passe des choses et a+b est un programme pour la machine elle même mais pas pour le programmeur.</p>
+<p>on dit que a+b est une expression elle produit un résultat, ne modifie en elle même aucun état.</p>
+<p>Changement d'un état, pour une instruction
+$$e_i \xrightarrow{\text{instruction}} e_j$$</p>
+<p>Un programme impératif par de l'état initial $e_{init}$ et se termine dans un etat final $e_{fin}$ suite à l'exucution d'une séquence d'instructions</p>
+$$e_{init} \xrightarrow{\text{instructions}} ... \xrightarrow{\text{instructions}} e_{fin}$$
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Exemple</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>2</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>4</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+$$\phi \xrightarrow{\text{x=2}} {x:2} \xrightarrow{\text{y=2*x}} {x:2, y:4}$$
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Les-d%C3%A9fis">Les d&#233;fis<a class="anchor-link" href="#Les-d%C3%A9fis">&#182;</a></h2><p>Définir des outils de structuration des programmes pour permettre la conception, l’écriture et la maintenance (évolutive et corrective) de programme de grande taille :</p>
+<ul>
+<li><strong>Structures de contrôle</strong> (conditionnelle et répétition)</li>
+<li><strong>Types de données :</strong> organiser les données. </li>
+<li><strong>Sous-programmes :</strong> procédures et fonctions (organiser les instructions) </li>
+<li><strong>Modules et bibliothèques</strong> (organisation les sous-programmes et les types) </li>
+<li>Mais aussi : <strong>raisonner sur le programme</strong> (typage, flot de contrôle, assertions, preuve...), tests (fonctionnels, structurels, de performance), documentation, etc.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Comment-trouver-une-solution-:-Le-raffinage">Comment trouver une solution : Le raffinage<a class="anchor-link" href="#Comment-trouver-une-solution-:-Le-raffinage">&#182;</a></h2><p>Décomposer le problème posé en sous-problèmes qui seront à leur tour décomposés jusqu’à obtenir des problèmes élémentaires (i.e. compréhensible du processeur).</p>
+<p>Ici un problèmes est élémentaire s’il correspond à une instruction ou une expression du langage algorithme.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Au-debut-:-Comprendre-le-probl%C3%A8me">Au debut : Comprendre le probl&#232;me<a class="anchor-link" href="#Au-debut-:-Comprendre-le-probl%C3%A8me">&#182;</a></h2><p>Pour avoir une chance de trouver la solution (un programme qui répond à la demande), il faut bien comprendre le problème posé (la demande)</p>
+<p>Moyens :</p>
+<ul>
+<li>Reformuler le problème en rédigeant la demande. </li>
+<li>Lister des « exemples ou cas d’utilisation » du programme. Il s’agit de 
+préciser : <ul>
+<li>les données en entrées ;  </li>
+<li>et les résultats attendus. </li>
+</ul>
+</li>
+</ul>
+<p>Remarque : Les exemples d’utilisation donneront les jeux de test fonctionnels qui permettront de tester le programme.</p>
+<p>Le développement dirigé par les tests (TDD) préconise d'écrire les tests avant le programme lui même</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Revenons-a-notre-exemple-:-une-equation-du-premier-degr%C3%A9">Revenons a notre exemple : une equation du premier degr&#233;<a class="anchor-link" href="#Revenons-a-notre-exemple-:-une-equation-du-premier-degr%C3%A9">&#182;</a></h2><p>Problème (demande du client): résoudre l’équation du premier degré où on devra saisir les coéficients de l'équiation</p>
+<p>Premier raffinage : mieux comprendre le problème en posant des questions aux spécialiste du domaine.</p>
+<p><strong>R0 : résoudre l’équation du premier degré sous la forme ax+b=0, a et b sont saisies par l'utilisateur</strong></p>
+<p>donner quelques exemples: cas d’utilisation ou exemple d’utilisation : jeux de test</p>
+<ul>
+<li>[ ] a=1,b=0 =&gt; réponse 0</li>
+<li>[ ] a=1,b=1 =&gt; réponse -1</li>
+<li>[ ] a=0,b!=0 =&gt; erreur pas de solution</li>
+<li>[ ] a=0,b=0 =&gt; infinité de solution</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Identifier-une-solution-informelle">Identifier une solution informelle<a class="anchor-link" href="#Identifier-une-solution-informelle">&#182;</a></h2><ul>
+<li>Identifier une manière de résoudre le problème. </li>
+<li>Il s’agit d’avoir l’idée, l’intuition de comment traiter le problème. </li>
+<li>Comment trouver l’idée ? <strong>C’est le point difficile !</strong> c'est l'éxpérience, c'est le travail, c'est les exemples, ....</li>
+</ul>
+<p>Par exemple : Pour calculer la solution du premier degré , ici la solution est triviale <code>(x = -b/a)</code> à condition de penser à tous les cas particuliers et comment les traiter et à quel moment</p>
+<p>Remarque : On peut vérifier son idée sur les exemples d’utilisation identifiés.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Continuer-%C3%A0-raffiner">Continuer &#224; raffiner<a class="anchor-link" href="#Continuer-%C3%A0-raffiner">&#182;</a></h2><blockquote><p>-- R0 : résoudre l’équation du premier degré sous la forme ax+b=0</p>
+<blockquote><p>R01 : Lire les données a,b</p>
+<p><strong>R02 : calculer -b/a en respectant les contrainte</strong></p>
+<p>R03 : afficher le résultat</p>
+</blockquote>
+</blockquote>
+<h2 id="Raffinons-R02">Raffinons R02<a class="anchor-link" href="#Raffinons-R02">&#182;</a></h2><blockquote><p>-- R02 : calculer -b/a en respectant les contraintes  : choisir la solution en fonctions des valeur en entrée a et b</p>
+<blockquote><p>R021. Si a!=0 solution est -b/a</p>
+<p>R022. si a et b = 0 une infinité de solution</p>
+<p>R023. si a=0 et b!=0 pas de solution</p>
+</blockquote>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Tout-ceci-commence-%C3%A0-prendre-forme">Tout ceci commence &#224; prendre forme<a class="anchor-link" href="#Tout-ceci-commence-%C3%A0-prendre-forme">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># l&#39;algorithme directement en pseudo python (je reviendrais sur la syntaxe, pour le moment consider que c&#39;est du pseudo code)</span>
+<span class="c1"># Le raffinage R02</span>
+<span class="k">def</span> <span class="nf">f_premier_degre</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+  <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">  a: coéficient a</span>
+<span class="sd">  b: coéficient b</span>
+<span class="sd">  &#39;&#39;&#39;</span>
+  <span class="k">if</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="p">(</span><span class="o">-</span><span class="n">b</span><span class="o">/</span><span class="n">a</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="s2">&quot;Infinité de solutions&quot;</span>
+  <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">!=</span><span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="s2">&quot;Pas de solution&quot;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Le programme principal (le début), Le raffinage R0</span>
+<span class="k">def</span> <span class="nf">premier_degre</span><span class="p">():</span>
+  <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">  résourdre l&#39;equation du premier degré sous la forme</span>
+<span class="sd">  a*x + b = 0</span>
+<span class="sd">  &#39;&#39;&#39;</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Saisir a et b les coéficient de l&#39;équiation a*x+b=0&quot;</span><span class="p">)</span>
+  <span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Donner le coéficient a :&quot;</span><span class="p">)</span>
+  <span class="n">b</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Donner le coéficient b :&quot;</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">f_premier_degre</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">premier_degre</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Help on function premier_degre in module __main__:
+
+premier_degre()
+    résourdre l&#39;equation du premier degré sous la forme
+    a*x + b = 0
+
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">premier_degre</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Le programme principal (le début), Le raffinage R0</span>
+<span class="k">def</span> <span class="nf">premier_degre</span><span class="p">():</span>
+  <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">  résourdre l&#39;equation du premier degré sous la forme</span>
+<span class="sd">  a*x + b = 0</span>
+<span class="sd">  &#39;&#39;&#39;</span>
+  <span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Donner le coéficient a :&quot;</span><span class="p">)</span>
+  <span class="n">b</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Donner le coéficient b :&quot;</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">f_premier_degre</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">),</span><span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">)))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">premier_degre</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Donner le coéficient a :10
+Donner le coéficient b :20
+-2.0
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># le vraie travail est fait dans f_premier_degre, testons..</span>
+<span class="k">assert</span> <span class="n">f_premier_degre</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;Infinité de solutions&quot;</span><span class="p">,</span> <span class="s2">&quot;quand a et b=0 on doit avoir infomnité de solution&quot;</span>
+<span class="k">assert</span> <span class="n">f_premier_degre</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;Pas de solution&quot;</span><span class="p">,</span> <span class="s2">&quot;quand a=0 et b!=0 on doit avoir pas de solution&quot;</span>
+<span class="k">assert</span> <span class="n">f_premier_degre</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Devrait être -1/1 le résultat était </span><span class="si">{</span><span class="n">f_premier_degre</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="k">assert</span> <span class="n">f_premier_degre</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Devrait être 2/1 le résultat était </span><span class="si">{</span><span class="n">f_premier_degre</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+</body>
+
