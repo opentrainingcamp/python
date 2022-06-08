@@ -19,3 +19,8 @@ Grâce au cloud (google Colab) Vous pourrez réaliser vos premiers exemples sans
 ### Option : installer Python avec Anaconda
 
 Anaconda est une distribution libre et open source des langages de programmation Python et R appliqué au développement d'applications dédiées à la science des données et à l'apprentissage automatique (traitement de données à grande échelle, analyse prédictive, calcul scientifique), qui vise à simplifier la gestion des paquets et de déploiement.
+
+# Les notebooks des sections
+
+## [Impératif](Notebook/imperatif)
+## [Fonctionnel](Notebook/fonctions)
