@@ -13154,6 +13154,187 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-3-utilisation-d'une-librairie-(package)">Exercice 3 utilisation d'une librairie (package)<a class="anchor-link" href="#Exercice-3-utilisation-d'une-librairie-(package)">&#182;</a></h2><p>Écrire un programme qui, à partir de la saisie d'un rayon et d'une hauteur, calcule le volume d'un cône droit.</p>
+<p><img height="200" src="https://github.com/opentrainingcamp/python/raw/main/imgs/cone.png" /></p>
+<blockquote><p>Indications:</p>
+<ul>
+<li>$volume = \frac{\pi * r^2 * H}{3}$</li>
+<li>Vous pouvez utiliser l'opérateur ** pour élevé à la puissance</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="c1">#@title Une solution</span>
+<span class="n">r</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez un rayon &quot;</span><span class="p">))</span>
+<span class="n">H</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez une hauteur&quot;</span><span class="p">))</span>
+<span class="n">volume</span> <span class="o">=</span> <span class="p">(</span><span class="mf">3.14</span> <span class="o">*</span> <span class="n">r</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">H</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">volume</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Entrez un rayon 1
+Entrez une hauteur1
+1.0466666666666666
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="c1">#@title Une autre solution</span>
+<span class="c1"># utilisation de la librairie math</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="n">r</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez un rayon &quot;</span><span class="p">))</span>
+<span class="n">H</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez une hauteur&quot;</span><span class="p">))</span>
+<span class="n">volume</span> <span class="o">=</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">H</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">volume</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Entrez un rayon 1
+Entrez une hauteur1
+1.0471975511965976
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercice-4-Boucle">Exercice 4 Boucle<a class="anchor-link" href="#Exercice-4-Boucle">&#182;</a></h2><p>Entrez un prix HT (entrez 0 pour terminer) et affichez sa valeur TTC. Considérer par exemple que la TVA est de 10%</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="c1">#@title une solution</span>
+<span class="n">tva</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">100</span>
+<span class="n">prixht</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Saisir un prix HT &quot;</span><span class="p">))</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">prixht</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+  <span class="n">prixttc</span> <span class="o">=</span> <span class="n">prixht</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">tva</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Prix HT=</span><span class="si">{</span><span class="n">prixht</span><span class="si">}</span><span class="s2"> prix TTC=</span><span class="si">{</span><span class="n">prixttc</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+  <span class="n">prixht</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Saisir un prix HT &quot;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Saisir un prix HT 100
+Prix HT=100.0 prix TTC=110.00000000000001
+Saisir un prix HT 101
+Prix HT=101.0 prix TTC=111.10000000000001
+Saisir un prix HT 0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="c1">#@title une solution</span>
+<span class="n">tva</span> <span class="o">=</span> <span class="mi">10</span> 
+<span class="n">prixht</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Saisir un prix HT &quot;</span><span class="p">))</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">prixht</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+  <span class="n">prixttc</span> <span class="o">=</span> <span class="p">(</span><span class="n">prixht</span> <span class="o">*</span> <span class="p">(</span><span class="mi">100</span> <span class="o">+</span> <span class="n">tva</span><span class="p">))</span> <span class="o">/</span> <span class="mi">100</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Prix HT=</span><span class="si">{</span><span class="n">prixht</span><span class="si">}</span><span class="s2"> prix TTC=</span><span class="si">{</span><span class="n">prixttc</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+  <span class="n">prixht</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Saisir un prix HT &quot;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Saisir un prix HT 100
+Prix HT=100.0 prix TTC=110.0
+Saisir un prix HT 1001
+Prix HT=1001.0 prix TTC=1101.1
+Saisir un prix HT 0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
     </div>
   </div>
 </body>
