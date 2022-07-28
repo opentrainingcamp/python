@@ -1,4 +1,4 @@
-L’objectif de cet exercice est de programmer une recherche dans une liste triée.
+L’objectif de ce devoir est de programmer une recherche dans une liste triée.
 1. Il faut d’abord récupérer un fichier texte disponible ici [texte](mot_par_ligne.txt)
 . Ce fichier contient un mot par
 ligne. Il faut lire ce fichier et construire une liste avec tous ces mots.
